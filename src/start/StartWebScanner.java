@@ -8,6 +8,7 @@ public class StartWebScanner {
 		// TODO Auto-generated method stub
 		
 		WebScanMainFrame wsmf=new WebScanMainFrame();
+
 	}
 
 }
