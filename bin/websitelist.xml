@@ -1,4 +1,5 @@
-﻿<websitelist>  
+﻿<?xml version="1.0" encoding="UTF-8"?>  
+<websitelist>  
 	<默认列表>
 		<leaf>www.baidu.com</leaf>
 		<leaf>www.google.com</leaf>
@@ -6,6 +7,6 @@
 		<leaf>www.sousou.com</leaf>
 	</默认列表>
 	<列表2>
-		<leaf>www.123.com</leaf>
+		<leaf>http://192.168.1.102/login.php</leaf>
 	</列表2>
 </websitelist>  

@@ -14,10 +14,26 @@ public class CheckBoxTreeSelectionListener extends MouseAdapter {
 	@Override
 	public void mouseClicked(MouseEvent e)
 	{
+//		JTree tree=(JTree)e.getSource();
+//		int x=e.getX(),y=e.getY();
+//		int row=tree.getRowForLocation(x, y);
+//		TreePath path=tree.getPathForRow(row);
+//		if(path!=null)
+//		{
+//			CheckBoxTree node=(CheckBoxTree)path.getLastPathComponent();
+//			if(node!=null)
+//			{
+//				boolean isSelected=!node.isSelected();
+//				node.setSelected(isSelected);
+//				((DefaultTreeModel)tree.getModel()).nodeStructureChanged(node);
+//			}
+//		}
+		
+		
 		JTree tree=(JTree)e.getSource();
 		int x=e.getX(),y=e.getY();
-		int row=tree.getRowForLocation(x, y);
-		TreePath path=tree.getPathForRow(row);
+	
+		TreePath path = tree.getPathForLocation(e.getX(),e.getY());
 		if(path!=null)
 		{
 			CheckBoxTree node=(CheckBoxTree)path.getLastPathComponent();
@@ -26,6 +42,10 @@ public class CheckBoxTreeSelectionListener extends MouseAdapter {
 				boolean isSelected=!node.isSelected();
 				node.setSelected(isSelected);
 				((DefaultTreeModel)tree.getModel()).nodeStructureChanged(node);
+			}
+			if(e.getButton()==MouseEvent.BUTTON3)
+			{
+				//.show(e.getComponent(),e.getX(),e.getY()); 
 			}
 		}
 	}
